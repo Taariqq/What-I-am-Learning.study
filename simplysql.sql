@@ -228,6 +228,8 @@ DESCRIBE teams;
 
 SELECT VERSION();
 
+SELECT category, title
+FROM entries e2;
 
 
 
