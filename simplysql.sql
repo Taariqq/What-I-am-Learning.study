@@ -20,7 +20,8 @@ USE TeamsGames;
 -- Teams_02_INSERT.sql
  CREATE TABLE teams ( id INTEGER NOT NULL PRIMARY KEY ,
 name VARCHAR(37) NOT NULL ,
-conference CHAR(2) NOT NULL CHECK ( conference IN ( 'AA','A','B','C','D','E','F','G' ) ) );
+conference CHAR(2) NOT NULL 
+CHECK ( conference IN ( 'AA','A','B','C','D','E','F','G' ) ) );
 
 INSERT INTO teams (id,	name,	conference)
 VALUES (9,'Riff Raff','F');
