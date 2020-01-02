@@ -359,22 +359,25 @@ SELECT
 FROM
 	cms.categories;
 
-SELECT
-	*
-FROM
-	cms.categories c;
+SELECT *
+FROM cms.categories c;
 
-SELECT
-	*
-FROM
-	cms.entries e;
+SELECT *
+FROM cms.entries e;
 
-SELECT
-	c.name, e.title, e.created, c.category	
-FROM
-	cms.categories c
+SELECT c.name, e.title, e.created, c.category	
+FROM cms.categories c
 		INNER JOIN cms.entries e 
 			ON e.category = c.category;
+
+USE TeamsGames;
+
+SELECT name 
+FROM teams;
+
+SHOW tables;
+DESCRIBE teams;
+
 
 
 
