@@ -20,35 +20,14 @@ USE TeamsGames;
 -- Teams_02_INSERT.sql
  CREATE TABLE teams ( id INTEGER NOT NULL PRIMARY KEY ,
 name VARCHAR(37) NOT NULL ,
-conference CHAR(2) NOT NULL CHECK ( conference IN ( 'AA',
-'A',
-'B',
-'C',
-'D',
-'E',
-'F',
-'G' ) ) );
+conference CHAR(2) NOT NULL CHECK ( conference IN ( 'AA','A','B','C','D','E','F','G' ) ) );
 
-INSERT
-	INTO
-	teams (id,
-	name,
-	conference)
-VALUES (9,
-'Riff Raff',
-'F');
+INSERT INTO teams (id,	name,	conference)
+VALUES (9,'Riff Raff','F');
 
-INSERT
-	INTO
-	TeamsGames.teams ( conference,
-	id,
-	name)
-VALUES ( 'F',
-37,
-'Havoc') ,
-( 'C ',
-63,
-'Brewers');
+INSERT INTO	TeamsGames.teams ( conference,	id,	name)
+VALUES ( 'F',37, 'Havoc') 
+			,( 'C ',63, 'Brewers');
 
 UPDATE
 	TeamsGames.teams
@@ -57,33 +36,21 @@ SET
 WHERE
 	id = 9;
 
-DELETE
-FROM
-	TeamsGames.teams
-WHERE
-	id = 63;
+DELETE FROM TeamsGames.teams
+WHERE	id = 63;
 
 SHOW DATABASES;
 
 USE TeamsGames;
 
-SELECT
-	*
-FROM
-	teams;
+SELECT	* FROM	teams;
 
-SELECT
-	name
-FROM
-	TeamsGames.teams;
+SELECT	name
+FROM	TeamsGames.teams;
 
-SELECT
-	id,
-	name
-FROM
-	TeamsGames.teans
-WHERE
-	conference = 'F';
+SELECT	id,	name
+FROM	TeamsGames.teans
+WHERE	conference = 'F';
 
 CREATE DATABASE cms;
 
@@ -96,63 +63,25 @@ updated TIMESTAMP NULL ,
 category VARCHARACTER(37) NULL ,
 content TEXT NULL );
 
-SELECT
-	*
-from
-	entries;
+SELECT	*
+from	entries;
 
-INSERT
-	INTO
-	entries (id,
-	title,
-	created,
-	updated,
-	category)
-VALUES (423 ,
-'What If I Get Sick and Die?' ,
-'2008-12-30' ,
-'2009-03-11' ,
-'angst') ,
-(524 ,
-'Uncle Karl and the Gasoline' ,
-'2009-02-28' ,
-NULL ,
-'humor') ,
-(537 ,
-'Be Nice to Everybody' ,
-'2009-03-02' ,
-NULL ,
-'advice') ,
-(573 ,
-'Hello Statue' ,
-'2009-03-17' ,
-NULL ,
-'humor') ,
-(598 ,
-'The Size of Our Galaxy' ,
-'2009-04-03' ,
-NULL ,
-'science') ;
+INSERT	INTO	entries (id,	title,	created,	updated,	category)
+VALUES (423 ,'What If I Get Sick and Die?' ,'2008-12-30' ,'2009-03-11' ,'angst') 
+,(524 ,'Uncle Karl and the Gasoline' ,'2009-02-28' ,NULL ,'humor') 
+,(537 ,'Be Nice to Everybody' ,'2009-03-02' ,NULL ,'advice') 
+,(573 ,'Hello Statue' ,'2009-03-17' ,NULL ,'humor') 
+,(598 ,'The Size of Our Galaxy' ,'2009-04-03' ,NULL ,'science') ;
 
-SELECT
-	category,
-	title
-FROM
-	cms.entries;
+SELECT	category,	title
+FROM	cms.entries;
 
-SELECT
-	title,
-	created,
-	content
-FROM
-	entries
-WHERE
-	id = 524;
+SELECT	title,	created,	content
+FROM	entries
+WHERE	id = 524;
 
-UPDATE
-	entries
-SET
-	content = 'When I was about nine or ten, my Uncle Karl, who
+UPDATE	entries
+SET	content = 'When I was about nine or ten, my Uncle Karl, who
 would''ve been in his late teens or early twenties, once performed
 what to me seemed like a magic trick.
 
@@ -167,36 +96,22 @@ watching. I don''t recall if he did it more than once.
 The funny part of this story? We lived to tell it.
 
 Karl was like that.'
-WHERE
-	id = 524;
+WHERE id = 524;
 
-SELECT
-	title,
-	created,
-	content
-FROM
-	entries
-WHERE
-	id = 524;
+SELECT	title,	created,	content
+FROM	entries
+WHERE	id = 524;
 
-SELECT
-	category,
-	COUNT(*) AS articles
-FROM
-	entries
-GROUP BY
-	category
-HAVING
-	COUNT(*) > 1;
+SELECT	category,	COUNT(*) AS articles
+FROM	cms.entries
+GROUP BY	category
+HAVING	COUNT(*) > 1;
 
-SELECT
-	title,
-	created
-FROM
-	entries
-ORDER BY
-	created DESC;
+SELECT	title,	created
+FROM	entries
+ORDER BY	created DESC;
 -- CHAPTER 3: for test tables in chapter 3
+
  SHOW DATABASES;
 
 USE cms;
@@ -205,81 +120,43 @@ SHOW tables;
 
 CREATE TABLE A ( a SMALLINT NOT NULL PRIMARY KEY ) ;
 
-INSERT
-	INTO
-	A
-VALUES (102),
-(104),
-(106),
-(107) ;
+INSERT	INTO	A
+VALUES (102),(104),(106),(107) ;
 
 CREATE TABLE B ( b SMALLINT NOT NULL PRIMARY KEY ) ;
 
-INSERT
-	INTO
-	B
-VALUES (101),
-(102),
-(104),
-(106),
-(108) ;
+INSERT	INTO	B
+VALUES (101),(102),(104),(106),(108) ;
 
-SELECT
-	a,
-	b
-FROM
-	A
-INNER JOIN B ON
-	a = b;
+SELECT	a,	b
+FROM	A
+INNER JOIN B ON	a = b;
 
-SELECT
-	a,
-	b
-FROM
-	B
-INNER JOIN A ON
-	b != a;
+SELECT	a,	b
+FROM	B
+INNER JOIN A ON	b != a;
 
-SELECT
-	a,
-	b
-FROM
-	A
-LEFT OUTER JOIN B ON
-	a = b;
+SELECT	a,	b
+FROM	A
+LEFT OUTER JOIN B ON	a = b;
 -- to see if order in FROM makes any difference
- SELECT
-	a,
-	b
-FROM
-	B
-LEFT OUTER JOIN A ON
-	a = b;
 
-SELECT
-	a,
-	b
-FROM
-	A
-RIGHT OUTER JOIN B ON
-	a = b;
+ SELECT	a,	b
+FROM	B
+LEFT OUTER JOIN A ON	a = b;
+
+SELECT	a,	b
+FROM	A
+RIGHT OUTER JOIN B ON	a = b;
 -- the above two produce same result
- SELECT
-	a,
-	b
-FROM
-	B
-RIGHT OUTER JOIN A ON
-	a = b;
 
-SELECT
-	a,
-	b
+ SELECT	a,	b
+FROM	B
+RIGHT OUTER JOIN A ON	a = b;
+
+SELECT	a,	b
 	-- error 
-
-	FROM A
-FULL OUTER JOIN B ON
-	a = b;
+	FROM A FULL OUTER JOIN B ON	a = b;
 -- mysql doesn't have a FULL OUTER JOIN
 -- This is the correct example: 
 -- SELECT ... 
@@ -289,37 +166,24 @@ FULL OUTER JOIN B ON
 -- FROM tbl1 RIGHT JOIN tbl2 ... 
 
 -- WHERE tbl1.col IS NULL
- SELECT
-	a,
-	b
-FROM
-	A
-LEFT JOIN B
-UNION ALL
-SELECT
-	a,
-	b
-FROM
-	A
+ SELECT	a,	b
+FROM	A
+LEFT JOIN B UNION ALL
+
+SELECT	a,	b
+FROM	A
 RIGHT JOIN B;
 -- WHERE A.col IS NULL;
 
 -- not working :(
- SELECT
-	a,
-	b
-FROM
-	A
+ SELECT	a,	b
+FROM	A
 CROSS JOIN B;
 -- column B is laid out first and then A is matched accordingly.
- SELECT
-	a,
-	b
-FROM
-	A,
-	B
-WHERE
-	a = b;
+
+ SELECT	a,	b
+FROM	A,	B
+WHERE	a = b;
 -- don't use these
 -- real world joins
  show databases;
@@ -328,42 +192,26 @@ USE cms;
 
 show tables;
 
-SELECT
-	e.category,
-	e.title,
-	e.created
-FROM
-	cms.entries e;
+SELECT	e.category,	e.title,	e.created
+FROM	cms.entries e;
 
 /*  Categories INNER JOIN Entries  */
 CREATE TABLE categories ( category VARCHAR(9) NOT NULL PRIMARY KEY ,
 name VARCHAR(37) NOT NULL );
 
-INSERT
-	INTO
-	categories
-VALUES ( 'blog' ,
-'Log on to My Blog' ) ,
-( 'humor' ,
-'Humorous Anecdotes' ) ,
-( 'angst' ,
-'Stories from the Id' ) ,
-( 'advice' ,
-'Gentle Words of Advice' ) ,
-( 'science' ,
-'Our Spectacular Universe' ) ;
+INSERT	INTO	categories
+VALUES ( 'blog' ,'Log on to My Blog' ) 
+,( 'humor' ,'Humorous Anecdotes' ) 
+,( 'angst' ,'Stories from the Id' ) 
+,( 'advice' ,'Gentle Words of Advice' ) 
+,( 'science' ,'Our Spectacular Universe' ) ;
 
-SELECT
-	category,
-	name
-FROM
-	cms.categories;
+SELECT	category,	name
+FROM	cms.categories;
 
-SELECT *
-FROM cms.categories c;
+SELECT * FROM cms.categories c;
 
-SELECT *
-FROM cms.entries e;
+SELECT * FROM cms.entries e;
 
 SELECT c.name, e.title, e.created, c.category	
 FROM cms.categories c
@@ -378,6 +226,7 @@ FROM teams;
 SHOW tables;
 DESCRIBE teams;
 
+SELECT VERSION();
 
 
 
