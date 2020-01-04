@@ -107,12 +107,12 @@ SELECT * FROM cms.entries;
 
 SELECT	category,	COUNT(*) AS articles
 FROM	cms.entries
-GROUP BY	category
+GROUP BY	category;
 HAVING	COUNT(*) > 1;
 
-SELECT	title,	created
+SELECT	title, category, created
 FROM	entries
-ORDER BY	created DESC;
+ORDER BY	category, created DESC;
 -- CHAPTER 3: for test tables in chapter 3
 
  SHOW DATABASES;
@@ -120,6 +120,8 @@ ORDER BY	created DESC;
 USE cms;
 
 SHOW tables;
+
+SELECT a FROM A; -- because b is in table B.
 
 CREATE TABLE A ( a SMALLINT NOT NULL PRIMARY KEY ) ;
 
@@ -131,17 +133,35 @@ CREATE TABLE B ( b SMALLINT NOT NULL PRIMARY KEY ) ;
 INSERT	INTO	B
 VALUES (101),(102),(104),(106),(108) ;
 
+-- **Type** inner join
 SELECT	a,	b
 FROM	A
-INNER JOIN B ON	a = b;
+INNER JOIN B 
+	ON	a = b;
 
 SELECT	a,	b
-FROM	B
-INNER JOIN A ON	b != a;
+FROM	
+B INNER JOIN A 
+	ON	b != a;
 
+-- **Type** left outer join
 SELECT	a,	b
-FROM	A
-LEFT OUTER JOIN B ON	a = b;
+FROM	
+A LEFT OUTER JOIN B 
+	ON	a = b;
+
+-- **Type** right outer join
+SELECT a, b 
+FROM
+A RIGHT OUTER JOIN B
+	ON a = b;
+
+-- **Type** Full outer join
+
+-- * FULL OUTER JOIN does not work in MySQL!!
+SELECT a, b 
+FROM A FULL OUTER JOIN B
+	ON a = b;
 -- to see if order in FROM makes any difference
 
  SELECT	a,	b
@@ -179,10 +199,13 @@ RIGHT JOIN B;
 -- WHERE A.col IS NULL;
 
 -- not working :(
- SELECT	a,	b
-FROM	A
-CROSS JOIN B;
--- column B is laid out first and then A is matched accordingly.
+
+-- **Type** cross join
+SELECT	a,	b
+FROM	
+A CROSS JOIN B;
+
+-- in above, column A is laid out first, matching each w/ B's 1st, then 2nd, and so on.
 
  SELECT	a,	b
 FROM	A,	B
