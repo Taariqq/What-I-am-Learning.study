@@ -103,6 +103,8 @@ SELECT	title,	created,	content
 FROM	entries
 WHERE	id = 524;
 
+SELECT * FROM cms.entries;
+
 SELECT	category,	COUNT(*) AS articles
 FROM	cms.entries
 GROUP BY	category
