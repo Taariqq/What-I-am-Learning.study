@@ -8,3 +8,6 @@ echo $wholesale_price;
 /*
  * NULL coalesce operator can be chained!
  */
+echo '<br>';
+
+echo phpinfo();
