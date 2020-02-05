@@ -5,11 +5,11 @@
  */
 
 function copyDate($beginningYear) {
- echo $dateRange = "&copy; $beginningYear to " . date('Y');
+  return $dateRange = "&copy; $beginningYear to " . date('Y');
   
 }
 
-copyDate(1977);
+echo copyDate(1977);
 
 
 
