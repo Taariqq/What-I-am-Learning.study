@@ -85,24 +85,47 @@ a {
 }
 
 /*add styles here*/
+  h1 + p::first-line{
+    font-family: georgia;
+    font-style: italic;
+  }
+  h1 + p::first-letter {
+    font-size: 3em;
+    font-family: Georgia;
+    float: left;
+    padding: 10px 5px 0 0;
+  }
+  /*
+  a::after {
+    content: " (outside link)";
+    color:  #666;
+    font-size: .8rem;
+  }
+  */
+  
+  a::after {
+    content: " ["attr(href)"]";
+    color: #666;
+    font-size: .8rem;
+  }
 
 </style>
 </head>
 <body>
-<header>
-  <h1>This is the site's main heading</h1>
-</header>
-<article>
-  <section>
-    <h1>This is the article's main headline</h1>
-    <p>This is a paragraph inside the main content. I would like to have a drop-cap for this paragraph, and italicize the first line. This should give me dramatic effect I'm looking for. It's not that I like drama, just that I need a little more text here, and wanted to show a more real-world example of pseudo-element selectors can help you write more efficient styles.</p>
-    <p>This is another paragraph. I need to have enough text in this paragraph to create multiple lines of text, so I can see the line spacing and space between paragraphs. Often people use lorem ipsum text to mock up several paragraphs of text. I considered using that here, but decided that you were probably tired of reading lorem ipsum text. It doesn't really mean anything anyway. Occasionally I'll feed it into Google's translator to see if anything comes out. Usually just single words, like "honey" or "shaded." It's like trying to read William S. Burroughs.</p>
-  </section>
-  <section>
-  <p><a href="http://www.lynda.com" title="visit lynda.com">Article reference</a></p>
-  </section>
-</article>
-<footer>
-<p>copyright and legal disclaimer.</p>
-</body>
-</html>
+  <header>
+    <h1>This is the site's main heading</h1>
+  </header>
+  <article>
+    <section>
+      <h1>This is the article's main headline</h1>
+      <p>This is a paragraph inside the main content. I would like to have a drop-cap for this paragraph, and italicize the first line. This should give me dramatic effect I'm looking for. It's not that I like drama, just that I need a little more text here, and wanted to show a more real-world example of pseudo-element selectors can help you write more efficient styles.</p>
+      <p>This is another paragraph. I need to have enough text in this paragraph to create multiple lines of text, so I can see the line spacing and space between paragraphs. Often people use lorem ipsum text to mock up several paragraphs of text. I considered using that here, but decided that you were probably tired of reading lorem ipsum text. It doesn't really mean anything anyway. Occasionally I'll feed it into Google's translator to see if anything comes out. Usually just single words, like "honey" or "shaded." It's like trying to read William S. Burroughs.</p>
+    </section>
+    <section>
+      <p><a href="http://www.lynda.com" title="visit lynda.com">Article reference</a></p>
+    </section>
+  </article>
+  <footer>
+    <p>copyright and legal disclaimer.</p>
+  </footer>
+</body></html>

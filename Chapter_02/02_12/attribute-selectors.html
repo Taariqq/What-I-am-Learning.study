@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
@@ -7,20 +8,61 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1038.36">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 10.0px 0.0px; font: 11.0px Georgia}
-    li.li1 {margin: 0.0px 0.0px 10.0px 0.0px; font: 11.0px Georgia}
-    ul.ul1 {list-style-type: none}
+    p.p1 {
+      margin: 0.0px 0.0px 10.0px 0.0px;
+      font: 11.0px Georgia
+    }
+
+    li.li1 {
+      margin: 0.0px 0.0px 10.0px 0.0px;
+      font: 11.0px Georgia
+    }
+
+    ul.ul1 {
+      list-style-type: none
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a[href^="http://"] { /* beginning of the string */
+      color: red;
+    }
+    
+    a[href$="pdf"] { /* end of the string */
+      color: mediumaquamarine;
+    }
+    
+    a[title*="visit"] { /* existance of */
+      color: magenta;
+    }
+    
+    a[href*="_docs"] { /* for any links w/ "_docs" in them */
+      color: deepskyblue;
+    }
+    
+    p.red {
+      color: green;
+    }
+    
+    p[class~="red"] {
+      color: red;
+    }
+   
+
   </style>
 </head>
+
 <body>
-<ul class="ul1">
-  <li class="li1"><a href="http://www.lynda.com/">This is an external link</a></li>
-  <li class="li1"><a href="file:///Volumes/LDC/Production/Projects/Video/Video%20In%20Progress/CSS%20Core%20Concepts/Project/Exercise%20Files/Chapter_02/02_12/about.htm">This is an local link</a></li>
-  <li class="li1"><a href="file:///Volumes/LDC/Production/Projects/Video/Video%20In%20Progress/CSS%20Core%20Concepts/Project/Exercise%20Files/Chapter_02/02_12/_docs/plan.pdf">This is a link to a resource</a></li>
-</ul>
-<p class="p1">This paragraph has the classes red, blue, and green.</p>
-<p class="p1">This paragraph has the classes red, and green.</p>
-<p class="p1">This paragraph has the classes red, and blue.</p>
-<p class="p1">This paragraph only has the class red.</p>
+  <ul>
+    <li><a href="http://www.lynda.com/" title="visit lynda.com">This is an external link</a></li>
+    <li><a href="about.htm" title="please visit about us">This is an local link</a></li>
+    <li><a href="_docs/plan.pdf" title="download our annual report">This is a link to a resource</a></li>
+  </ul>
+  <p class="red blue green">This paragraph has the classes red, blue, and green.</p>
+  <p class="red green">This paragraph has the classes red, and green.</p>
+  <p class="red blue">This paragraph has the classes red, and blue.</p>
+  <p class="red">This paragraph only has the class red.</p>
 </body>
+
 </html>

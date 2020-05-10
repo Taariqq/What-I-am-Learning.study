@@ -53,7 +53,6 @@ h2 {
 	font-weight: normal;
 	margin-bottom: 0;
 	color: #42403E;
-	border-bottom: 1px solid #42403E;
 }
 
 p {
@@ -81,6 +80,20 @@ h1 + p, h2 + p {
 }
 
 /*add styles here*/
+  span:first-child {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: maroon;
+  }
+  
+  h2:first-of-type {
+    border-bottom: 1px solid #42403E;
+  }
+  
+  p:only-child {
+    font-style: italic;
+    text-align: center;
+  }
 
 </style>
 </head>
@@ -96,8 +109,8 @@ h1 + p, h2 + p {
   </section>
   <section>
     <h2>This is a subheading</h2>
-    <p><span>This is more paragraph</span> text. I'd like to do something special with the first paragraph after a subheading. Perhaps italicize it, or adjust the margin between them.</p>
-    <p>This is another paragraph, more body copy that follows the subheading, but it is not directly after it, so I don't want it to receive the same styling as the paragraph above it.</p>
+    <p><span>This is more paragraph</span> text. I'd like to do something special with the <span>first paragraph</span> after a subheading. Perhaps italicize it, or adjust the margin between them.</p>
+    <p>This is another paragraph, more body copy that follows the subheading, but it is not directly after it, so I don't want it to <span>receive the same styling</span> as the paragraph above it.</p>
     <h2>Another subheading, but NOT the first in the section.</h2>
     <p>Yet another body copy paragraph, this one is only here to add weight to the styling.</p>
   </section>
@@ -112,5 +125,6 @@ h1 + p, h2 + p {
 </article>
 <footer>
 <p>copyright and legal disclaimer</p>
+  </footer>
 </body>
 </html>

@@ -618,39 +618,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 /*Add lab selectors here:*/
 
 /*write a selector that targets every link element throughout the entire site*/
-{
+a {
 	text-decoration: none;
 	color: rgb(219,126,64);
 	border-bottom: 1px dotted rgb(219,126,64);
 }
 
 /*write a selector that targets the copyright paragraph in the footer*/
- {
+footer .notice {
 	width: 300px;
 }
 
 /*write a selector that targets the dates inside the upcoming dates list on the index.htm page*/
-{
+.news span{ /* li > span (direct child) */
 	font-weight: bold;
 }
 
 /*write a selector that changes the background of every 2nd list item in the unordered list that forms the archived gallery menu in the sidebar*/
- {
+#archives li:nth-child(2n) { /* aside nav li: is better because # add too much specificity weight */
 	background: rgb(237, 228, 214);
 }
 
 /*write a selector that will change the color of the main navigation links as users hover over them*/
-{
+#mainNav a:hover{
 	color: rgb(219,126,64);
 }
 
 /*write a selector that targets the search input text box in the footer, make sure it will ONLY target the search input form element*/
- {
+input#search { /* input[type="search"] is unique in all fields */
 	width: 250px;
 }
 
 /*write a selector that will add the usage text you see here at the end of the photos gallery*/
- {
+.photos::after {
 	content: "All photos by James Williamson | used by permission";
 	font-style: italic;
 	text-align: right;
