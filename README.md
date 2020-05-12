@@ -1,2 +1,3 @@
-﻿# بسم الله الرحمن الرحيم
-### This is a test to see if I can use StackEdit to work on local files.
+﻿Repo for Lynda.com course 'CSS essential training' by Christina Truong.
+
+started May 13, 2020
