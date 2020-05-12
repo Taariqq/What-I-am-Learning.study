@@ -645,7 +645,7 @@ footer .notice {
 }
 
 /*write a selector that targets the search input text box in the footer, make sure it will ONLY target the search input form element*/
-input#search { /* input[type="search"] is unique in all fields */
+input #search { /* input[type="search"] is unique in all fields */
 	width: 250px;
 }
 

@@ -16,13 +16,17 @@ body {
 }
 /*add styles here*/
 p {
-	color: red;
+	color: red !important;
 }
+  #mainContent p {
+    color: green;
+  }
 </style>
 </head>
 <body>
-<section id="mainContent">
-<p>I am a paragraph nested inside a section. I also have a <strong>strong tag</strong> nested inside of me.</p>
-</section>
+  <section id="mainContent">
+    <p style="color: purple">I am a paragraph nested inside a section. I also have a <strong>strong tag</strong> nested inside of me.</p>
+  </section>
 </body>
+
 </html>

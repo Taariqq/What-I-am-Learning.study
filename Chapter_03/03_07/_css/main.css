@@ -8,17 +8,25 @@ attribution would be nice, but not required
 */
 
 /* desolve color palette
-#4C4341     rgb(76, 67, 65)  ASH
-#646266      rgb(100, 98, 102)  DULL GRAY
-#7B798F     rgb(123, 121, 143)  PEWTER BLUE
-#ADA982    rgb(173, 169, 130)  DARK TAN
-#D8D5BC   rgb(216, 213, 188)  MED TAN
-#EDE4D6   rgb(237, 228, 214)  LIGHT TAN
-#667F6A     rgb(102, 127, 106)  DARK GREEN
+#4C4341  rgb(76, 67, 65)  ASH
+#646266  rgb(100, 98, 102)  DULL GRAY
+#7B798F  rgb(123, 121, 143)  PEWTER BLUE
+#ADA982  rgb(173, 169, 130)  DARK TAN
+#D8D5BC  rgb(216, 213, 188)  MED TAN
+#EDE4D6  rgb(237, 228, 214)  LIGHT TAN
+#667F6A  rgb(102, 127, 106)  DARK GREEN
 #DB7E40	 rgb(219,126,64) BURNT ORANGE
 */
 
 /*Global styles -----------------------------------------------------------------------------------------------------------*/
+* {
+  	font: 100% Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	position: relative;
+	color: rgb(76, 67, 65);
+	font-weight:normal;
+	font-style:normal;
+}
 
 /*limited reset*/
 html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
@@ -242,38 +250,38 @@ a.shop {
 
 
 /*article styles*/
-#content article section {
+section article section {
 	border-bottom: 2px solid rgb(76, 67, 65);
 	margin-bottom: 2em;
 }
 
-#content article h1, #content article h2, #content article h3 {
+section article h1, section article h2, section article h3 {
 	font-family: Georgia, Times, "Times New Roman", serif;
 }
 
-#content article > h1 {
+section article > h1 {
 	font-size: 1.8em;
 	border-bottom: 2px solid rgb(76, 67, 65);
 	margin-bottom: 1.5em;
 	background: url(../_images/icon_sprites_50.png) no-repeat
 }
 
-#content article h2 {
+section article h2 {
 	font-size: 1.4em;
 	border-bottom: 2px solid rgb(76, 67, 65);
 	margin-top: 1.5em;
 }
 
-#content article h2 a {
+section article h2 a {
 	color: rgb(76, 67, 65);
 	border: none;
 }
 
-#content article p {
+section article p {
 	font-size:1em;
 	margin: 1.2em 0;
 }
-#content article ul {
+section article ul {
 	margin:0 0 1em 50px;
 }
 
@@ -285,6 +293,13 @@ a.shop {
 #galleries h1 {
 	background-position: right top;
 	padding: 20px 0 5px;
+}
+#galleries h2 {
+  	font: 2.8em Georgia, Times, "Times New Roman", serif;
+	float: left;
+	margin: 0 0 .1em;
+	border: none;
+
 }
 #contact h1 {
 	background-position: right -395px;
@@ -515,6 +530,11 @@ aside h2 {
 	clear: both;
 }
 
+aside .contest p {
+  	font-size: .9em;
+	margin: 0 auto 1.5em;
+}
+
 aside nav {
 	margin-bottom: 2em;
 }
@@ -634,11 +654,11 @@ input[type="search"] {
 	color: rgb(76, 67, 65);
 	font-weight:normal;
 	font-style:normal;
-*/
+ == done == */
 
 /*
 2. Browse up to line 244 and view the article styles section. These selectors are conflicting with the page-specific main content styles below them, and preventing some of the formatting from those rules from being applied. Modify the selectors in this section to resolve this conflict.
-*/
+== done == */
 
 /*
 3. These properties need to be included in a rule that targets heading 2s on the Gallery page only
@@ -647,7 +667,7 @@ input[type="search"] {
 	float: left;
 	margin: 0 0 .1em;
 	border: none;
-*/
+== done == */
 
 /*
 4. These properties should be used to write a rule that changes the paragraph formatting for the text in the page sidebar. You should be careful to make sure the rule is written so that it overwrites previous paragraph styling and limits the styling to the contest sections
@@ -656,3 +676,12 @@ input[type="search"] {
 	margin: 0 auto 1.5em;
 
 */
+
+
+
+
+
+
+
+
+
