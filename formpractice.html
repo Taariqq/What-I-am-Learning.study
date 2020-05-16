@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>form practice</title>
+</head>
+
+<body>
+
+  <form action="whatever.php">
+    <h3>Please share as much information as possible:</h3>
+
+    <!--  radio buttons -->
+    <p>color of the cat you would like:
+      <label for="black">
+        <input type="radio" id="black" value="black" name="color-the-cat" checked>black
+      </label>
+      <label for="white">
+        <input type="radio" id="white" value="white" name="color-the-cat">white
+      </label>
+      <label for="mix">
+        <input type="radio" id="mix" value="mix" name="color-the-cat">mix color
+      </label>
+    </p>
+
+    <!-- checkboxes -->
+    <p>personality of the cat you are looking for:
+      <label for="tame">
+        <input type="checkbox" id="tame" value="tame" name="cat-personality" checked>tame
+      </label>
+      <label for="sleepy">
+        <input type="checkbox" id="sleepy" value="sleepy" name="cat-personality">sleepy
+      </label>
+      <label for="playful">
+        <input type="checkbox" id="palyful" value="playfur" name="cat-personality">playful
+      </label>
+    </p>
+
+    <!-- dropdown lists -->
+    <p>how would you like your cat delivered?
+      <select name="delivery" id="delivery">
+        <option value="pickup">We will pick up</option>
+        <option value="deliver1hour">Please deliver within the hour</option>
+        <option value="delivertoday">please deliver by today, anytime</option>
+        <option value="weekend">please arrange to have our cat deliverd over the weekend</option>
+      </select>
+    </p>
+    <!-- message box-->
+    <p>If you would be so kind to leave us your comment?
+      <input type="text" placeholder="meoW" required>
+    </p>
+    <!--submit button-->
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+
+</html>
