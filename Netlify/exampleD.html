@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ala | example D</title>
+  <style>
+    #box_1 {
+      background: #ee3e64;
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    #box_2 {
+      background: #44accf;
+      position: relative;
+      left: 200px;
+      width: 200px;
+      height: 200px;
+    }
+
+    #box_3 {
+      background: #b7d84b;
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    p {
+      width: 60%;
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="box_1">
+    <div id="box_2"></div>
+  </div>
+  <div id="box_3"></div>
+  <br>
+  
+  <p>Creating a coordinate system for child elements is another one of the relative positioning property’s super powers. <u>A coordinate system is a reference point for offset properties.</u> Recall in example C, our blue block (#box_2) is not sitting inside of any other elements, <u>so the coordinate system it’s using to offset itself 200 pixels from the left is <em>the document itself</em></u>. If we place the #box_2 element inside of #box_1, we’ll get a different result, as #box_2 will position itself relative to the coordinate system from #box_1. For the next example, we won’t change any CSS, we’ll adjust our HTML to move #box_2 inside of #box_1:
+  </p>
+  <p>Example D shows our new markup. Because of the new coordinate system, the blue block measures its offset 200 pixels from the left of the red block (#box_1) instead of the document. This practice is more common with elements set to position: absolute—the way you wish you could have built towers when you were younger.
+  </p>
+
+</body>
+
+</html>

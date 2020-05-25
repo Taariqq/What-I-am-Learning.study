@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>example H2</title>
+
+  <style>
+    #box_1 {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background: #ee3e64;
+    }
+
+    #box_2 {
+      position: absolute;
+      left: 100px;
+      top: 0px;
+      width: 200px;
+      height: 200px;
+      background: #44accf;
+    }
+
+    code {
+      background: #ddd;
+      padding: 0 .4em;
+      font-size: .8rem;
+    }
+
+    p {
+      width: 60%;
+      margin: 0 auto 1.3em;
+
+  </style>
+</head>
+
+<body>
+
+  <div id="box_1"></div>
+  <div id="box_2"></div>
+  <br>
+
+  <p>In example H2, focus on the blue block (<code>#box_2</code>). <u>Notice how I use only one offset</u>, <code>left: 100px;</code>. This allows the <code>#box_2</code> element to maintain its top edge and still shift 100 pixels to the left. If we applied a second offset to the top, we would see that our blue block (<code>#box_2</code>) is pulled to the top of the document. See that here, in example H3:
+  </p>
+  <p>... and the fact that this paragraph is moved up proves the fact that the blue box is out of the document flow!</p>
+
+</body>
+
+</html>

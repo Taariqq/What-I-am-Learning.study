@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ala | example E</title>
+
+  <style>
+    #box_1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      background: #ee3e64;
+    }
+
+    #box_2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background: #44accf;
+    }
+
+    #box_3 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      background: #b7b84b;
+    }
+
+    #box_4 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background: #ebde52;
+    }
+
+    div+p {
+      margin-top: 300px;
+    }
+
+    p {
+      width: 60%;
+      margin: 0 auto 1.3em;
+    }
+    h3 {
+      margin-left: 300px;
+    }
+
+
+    code {
+      background: #ddd;
+      padding: 0 .4em;
+      font-size: .8rem;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div id="box_1"></div>
+  <div id="box_2"></div>
+  <div id="box_3"></div>
+  <div id="box_4"></div>
+
+  <p>If the <code>relative</code> value acts like Superman, then the <code>absolute</code> value mirrors <i>Inception</i>—a place where you design your own world. Unlike the <code>static</code> and <code>relative</code> values, an absolutely positioned element is removed from the normal flow. This means you can put it anywhere, and it won’t<i> affect or be affected by</i> any other element in the flow. <u>Think of it as an element with a giant strip of velcro on its back</u>. Just tell it where to stick and it sticks. Exactly like the <code>relative</code> value, absolutely positioned elements respond to offset properties for positioning. You can set an element to <code>top: 100px</code> and <code>left: 200px;</code> and that element will sit exactly 100px from the top and 200px from the left of the document. Let’s look at an example using four elements:
+  </p>
+  <p>Example E shows four boxes, each in a corner of the browser window. Since we set each box’s <code>position</code> value to <code>absolute</code>, we’ve essentially velcroed a box to each corner of our browser window. As you resize the browser, those boxes will stay in their respective corners. If you shrink the browser window so that the boxes overlap, you’ll notice that there is no interaction at all—that’s because they’re out of the document’s normal flow.
+  </p>
+  <p>Just like <code>relative</code> elements, <code>absolute</code> elements create a new coordinate system for child elements. Example F extends Example E, with an orange element set inside each box. Notice the offset coordinates are in respect to each parent element.
+  </p>
+  <p>Just like <code>relative</code> elements, <code>absolute</code> elements create a new coordinate system for child elements.
+</p>
+
+  <h3>... from FreeCodeCamp.org site .. </h3>
+  <p>One nuance with absolute positioning is that it will be locked relative to its closest positioned ancestor. If you forget to add a position rule to the parent item, (this is typically done using <code>position: relative;</code>), the browser will keep looking up the chain and ultimately default to the body tag.
+  </p>
+
+</body>
+
+</html>
