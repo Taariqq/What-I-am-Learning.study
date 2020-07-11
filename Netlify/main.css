@@ -1,0 +1,14 @@
+    body {
+      background: #c8d5b3;
+      font-family: 'Balsamiq Sans', cursive;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      border-bottom: 1px dotted red;
+    }
