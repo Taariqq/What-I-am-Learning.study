@@ -1,0 +1,5 @@
+{
+    "fiveServer.highlight": true,
+    "fiveServer.injectBody": true,
+    "liveServer.settings.CustomBrowser": "chrome"
+}
